@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import type { WebhookEvent } from "@prisma/client";
 import { clearEvents, getEvents } from "../action";
 import { getBaseUrl } from "@/lib/base-url";
+import { WebhookEvent } from "../generated/prisma/client";
 
 const RECEIVER_URL = `${getBaseUrl()}/api/receive`;
 export default function ReceiverPage() {
